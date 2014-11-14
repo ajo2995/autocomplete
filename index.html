@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>jQuery UI Autocomplete - Remote websocket datasource</title>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    $(function() {
+      var socket = io('http://localhost');
+      $( "#genes" ).autocomplete({
+        delay: 10,
+        source: function sourceFunc(request, response) {
+          socket.emit('keypress', request.term, response);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  
+  <div class="ui-widget">
+    <label for="genes">Genes: </label>
+    <input id="genes">
+  </div>
+  
+</body>
+</html>

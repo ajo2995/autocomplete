@@ -1,0 +1,19 @@
+{
+  "name": "autocomplete",
+  "version": "0.0.0",
+  "description": "redis/socket.io autocomplete",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajo2995/autocomplete"
+  },
+  "author": "Andrew Olson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajo2995/autocomplete/issues"
+  },
+  "homepage": "https://github.com/ajo2995/autocomplete",
+  "dependencies": {
+    "socket.io" : "^1.2.0",
+    "redis"     : "^0.12.1"
+  }
+}
