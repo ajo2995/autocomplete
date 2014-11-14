@@ -7,7 +7,7 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     $(function() {
-      var socket = io('http://localhost');
+      var socket = io('/');
       $( "#genes" ).autocomplete({
         delay: 10,
         source: function sourceFunc(request, response) {
